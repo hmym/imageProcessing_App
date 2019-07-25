@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- canvasを使用することを宣言する -->
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      // 緑色の四角形を出す
+      // canvasを取得する
+      // documentとはwindowオブジェクトのプロパティ
+      // id=canvasを取得
+      const canvas = document.getElementById('canvas');
+      // 2d 2dimention ２次元で描画する機能を取り出す
+      const ctx = canvas.getContext('2d');
+      // ctxの色を指定
+      // cssのカラーで指定できる
+      ctx.fillStyle = 'red';
+      ctx.fillRect(10, 10, 10, 10);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(20, 20, 20, 20);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(30, 30, 30, 30);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(40, 40, 40, 40);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(50, 50, 50, 50);
+      ctx.fillStyle = 'red';
+      ctx.fillRect(60, 60, 60, 60);
+    </script>
+  </body>
+</html>
