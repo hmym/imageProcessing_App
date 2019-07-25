@@ -15,20 +15,17 @@
       const canvas = document.getElementById('canvas');
       // 2d 2dimention ２次元で描画する機能を取り出す
       const ctx = canvas.getContext('2d');
-      // ctxの色を指定
-      // cssのカラーで指定できる
-      ctx.fillStyle = 'red';
-      ctx.fillRect(10, 10, 10, 10);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(20, 20, 20, 20);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(30, 30, 30, 30);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(40, 40, 40, 40);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(50, 50, 50, 50);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(60, 60, 60, 60);
+      // 画像ファイルの読み込み
+      const img = new Image();
+      // img.src = 'https://www.stylist.co.uk/images/app/uploads/2017/10/24184627/d82c29b23a574d0de11df28351edde1e-256x256.jpg';
+      img.src = 'https://dogfood-tenchou.com/wp-content/uploads/2018/09/pomeranian-howtotame-1.jpg'
+      // onloadイベント　読み込まれた時に行われる処理
+      img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      // Canvasに画像を描画する
+      ctx.drawImage(img, 10, 10);
+}
     </script>
   </body>
 </html>
